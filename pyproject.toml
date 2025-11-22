@@ -1,0 +1,42 @@
+[project]
+name = "nf-scanner-api"
+version = "1.0"
+description = "API para scanner de notas fiscais."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    {name = "Arthur Ferreira", email = "fr.arthur.fr@gmail.com"}
+]
+dependencies = [
+    "nf-scanner-core",
+    "fastapi>=0.110.0",
+    "uvicorn>=0.27.0",
+    "python-multipart>=0.0.6",
+    "pydantic>=2.5.0",
+]
+
+[tool.uv.sources]
+nf-scanner-core = { path = "../nf-scanner-core/dist/nf_scanner_core-2.0-py3-none-any.whl" }
+
+[project.optional-dependencies]
+dev = [
+    "uv",
+    "black",
+    "pre-commit",
+    "pytest",
+]
+
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[dependency-groups]
+dev = [
+    "black>=25.11.0",
+]
+
+[project.scripts]
+api-start = "nf_scanner_api.app:main"
