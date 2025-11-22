@@ -27,4 +27,4 @@ jobs:
         run: uv sync --locked --all-extras --dev
 
       - name: Running tests
-        run: uv run build
+        run: uv build

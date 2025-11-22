@@ -337,7 +337,7 @@ dev = [
 requires-dist = [
     { name = "black", marker = "extra == 'dev'" },
     { name = "fastapi", specifier = ">=0.110.0" },
-    { name = "nf-scanner-core", path = "../nf-scanner-core/dist/nf_scanner_core-2.0-py3-none-any.whl" },
+    { name = "nf-scanner-core", git = "https://github.com/nf-scanner/nf-scanner-core.git?tag=2.0" },
     { name = "pre-commit", marker = "extra == 'dev'" },
     { name = "pydantic", specifier = ">=2.5.0" },
     { name = "python-multipart", specifier = ">=0.0.6" },
@@ -352,7 +352,7 @@ dev = [{ name = "black", specifier = ">=25.11.0" }]
 [[package]]
 name = "nf-scanner-core"
 version = "2.0"
-source = { path = "../nf-scanner-core/dist/nf_scanner_core-2.0-py3-none-any.whl" }
+source = { git = "https://github.com/nf-scanner/nf-scanner-core.git?tag=2.0#a2b0be480ce013fc919270f56b5d1c87f5889cf0" }
 dependencies = [
     { name = "anthropic" },
     { name = "numpy" },
@@ -362,25 +362,6 @@ dependencies = [
     { name = "pytesseract" },
     { name = "python-dotenv" },
 ]
-wheels = [
-    { filename = "nf_scanner_core-2.0-py3-none-any.whl", hash = "sha256:2d248340c2960e8566af2f19109be70beac18cbaf31d4304b0370b3f9c5e0a79" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "anthropic", specifier = ">=0.23.0" },
-    { name = "black", marker = "extra == 'dev'" },
-    { name = "numpy", specifier = ">=1.26.0" },
-    { name = "opencv-python", specifier = ">=4.8.0" },
-    { name = "pillow", specifier = ">=10.0.0" },
-    { name = "pre-commit", marker = "extra == 'dev'" },
-    { name = "pymupdf", specifier = ">=1.26.0" },
-    { name = "pytesseract", specifier = ">=0.3.13" },
-    { name = "pytest", marker = "extra == 'dev'" },
-    { name = "python-dotenv", specifier = ">=1.0.0" },
-    { name = "uv", marker = "extra == 'dev'" },
-]
-provides-extras = ["dev"]
 
 [[package]]
 name = "nodeenv"

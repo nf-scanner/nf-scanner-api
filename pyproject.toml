@@ -16,7 +16,7 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-nf-scanner-core = { path = "../nf-scanner-core/dist/nf_scanner_core-2.0-py3-none-any.whl" }
+nf-scanner-core = { git = "https://github.com/nf-scanner/nf-scanner-core.git", tag = "2.0" }
 
 [project.optional-dependencies]
 dev = [
