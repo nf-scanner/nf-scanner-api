@@ -17,3 +17,12 @@ repos:
         pass_filenames: false
         always_run: true
         types: [python]
+
+-   repo: local
+    hooks:
+    -   id: uv-build
+        name: uv-build
+        entry: uv build
+        language: system
+        pass_filenames: false
+        always_run: true
