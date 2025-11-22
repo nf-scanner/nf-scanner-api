@@ -1,5 +1,6 @@
 from nf_scanner_core.models.nfse import NFSe as NFSeModel
 
+
 class NFSe:
     """Modelo para equivalente a NFSe do nf-scanner-core."""
 
