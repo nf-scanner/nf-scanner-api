@@ -1,5 +1,6 @@
 """Modelo de documento para a API do NF Scanner."""
 
+
 class Document:
     """Modelo que representa um documento recebido."""
 
@@ -19,4 +20,3 @@ class Document:
             "document_name": self.document_name,
             "base64_content": self.base64_content,
         }
-
