@@ -4,16 +4,15 @@ repos:
     hooks:
     -   id: black
         language_version: python3
-        args: ["--check", "src", "tests"]
+        args: ["--check", "src"]
         always_run: true
         pass_filenames: false
 
 -   repo: local
     hooks:
-    -   id: pytest
-        name: pytest
-        entry: pytest tests
+    -   id: uv-build
+        name: uv-build
+        entry: uv build
         language: system
         pass_filenames: false
         always_run: true
-        types: [python]

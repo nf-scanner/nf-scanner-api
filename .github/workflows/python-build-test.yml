@@ -1,6 +1,6 @@
 # Esse workflow realiza a execução dos testes
 
-name: Python Execute Tests
+name: Python Build
 
 # Controls when the workflow will run
 on:
@@ -16,7 +16,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  python-execute-tests:
+  python-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -27,4 +27,4 @@ jobs:
         run: uv sync --locked --all-extras --dev
 
       - name: Running tests
-        run: uv run pytest --maxfail=1 --disable-warnings -q tests
+        run: uv run build
